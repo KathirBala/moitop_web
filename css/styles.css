@@ -595,9 +595,24 @@ html[data-lang="ta"] .eyebrow {
 
 .footer-inner {
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-lead {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.55rem;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.15rem;
 }
 
 .footer-logo {
@@ -623,13 +638,13 @@ html[data-lang="ta"] .footer-tagline {
 }
 
 .footer-copy {
-  margin: 0.65rem 0 0;
+  margin: 0;
   font-size: 0.92rem;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-powered {
-  margin: 0.15rem 0 0;
+  margin: 0;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -717,6 +732,16 @@ main {
 }
 
 @media (max-width: 520px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .footer-meta {
+    align-items: flex-end;
+  }
+
   :root {
     --shell: calc(100% - 1.5rem);
     --header-h: 4.25rem;
