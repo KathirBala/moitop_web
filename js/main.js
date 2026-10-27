@@ -53,7 +53,19 @@
         "Pin guest places on a map and keep phone numbers ready for WhatsApp — villages and hometowns stay part of the story.",
       "features.f6.title": "Private family accounts, phone-ready",
       "features.f6.body":
-        "Each family or organization keeps its own register. Invite members with roles, and use it on the day from a phone — installable like an app.",
+        "Each family or organization keeps its own register in its own separate database. Use it on the day from any phone — and install it like an app.",
+      "features.f7.title": "Share with family, switch between families",
+      "features.f7.body":
+        "Send a one-time link by email to bring in relatives as an admin, a member, or view-only. In more than one family? Switch between them in a tap — each family’s records stay separate.",
+      "features.f8.title": "Fast entry on the function day",
+      "features.f8.body":
+        "“Save & Next” keeps the queue moving, the search in the top bar finds any guest, and closing a function stops new entries once the event is over.",
+      "features.f9.title": "Function expenses & balance",
+      "features.f9.body":
+        "Note the hall, catering, and other costs against each function, and see the balance left from the moi received.",
+      "features.f10.title": "A tidy guest list",
+      "features.f10.body":
+        "Merge duplicate guests in one step and bring in your existing guest list from Excel — each person’s history stays together.",
       "families.eyebrow": "For Tamil homes",
       "families.title": "Built the way your community celebrates",
       "families.lead":
@@ -115,7 +127,19 @@
         "விருந்தினர் ஊர்களை வரைபடத்தில் குறித்து, WhatsApp-க்கு தயார் எண்களை வைத்திருங்கள் — கிராமங்களும் சொந்த ஊர்களும் கதையின் பகுதியாகவே இருக்கும்.",
       "features.f6.title": "தனிப்பட்ட குடும்பக் கணக்குகள், தொலைபேசிக்கு ஏற்றது",
       "features.f6.body":
-        "ஒவ்வொரு குடும்பமும் அமைப்பும் தன் சொந்தப் பதிவேட்டை வைத்திருக்கும். உறுப்பினர்களை அழைத்து, விழா நாளில் தொலைபேசியிலிருந்தே பயன்படுத்துங்கள் — செயலியைப் போல நிறுவலாம்.",
+        "ஒவ்வொரு குடும்பமும் அமைப்பும் தன் சொந்தப் பதிவேட்டைத் தனி தரவுத்தளத்தில் வைத்திருக்கும். விழா நாளில் எந்தத் தொலைபேசியிலிருந்தும் பயன்படுத்துங்கள் — செயலியைப் போல நிறுவலாம்.",
+      "features.f7.title": "குடும்பத்துடன் பகிருங்கள், குடும்பங்களுக்கு இடையே மாறுங்கள்",
+      "features.f7.body":
+        "மின்னஞ்சலில் ஒருமுறை மட்டும் வேலை செய்யும் இணைப்பை அனுப்பி, உறவினர்களை நிர்வாகி, உறுப்பினர் அல்லது பார்வை-மட்டும் அனுமதியுடன் சேர்க்கலாம். ஒன்றுக்கும் மேற்பட்ட குடும்பங்களில் இருந்தால் ஒரே தட்டில் மாறலாம் — ஒவ்வொரு குடும்பத்தின் பதிவுகளும் தனித்தனியாகவே இருக்கும்.",
+      "features.f8.title": "விழா நாளில் விரைவான பதிவு",
+      "features.f8.body":
+        "“சேமி & அடுத்து” வரிசையைத் தடையின்றி நகர்த்துகிறது, மேல் பட்டியிலுள்ள தேடல் எந்த விருந்தினரையும் கண்டுபிடிக்கும், நிகழ்வு முடிந்ததும் விழாவை மூடினால் புதிய பதிவுகள் சேராது.",
+      "features.f9.title": "விழாச் செலவுகள் & இருப்பு",
+      "features.f9.body":
+        "மண்டபம், சமையல் போன்ற செலவுகளை ஒவ்வொரு விழாவிலும் குறித்து, பெற்ற மொயிலிருந்து மீதமுள்ள இருப்பைக் காணுங்கள்.",
+      "features.f10.title": "ஒழுங்கான விருந்தினர் பட்டியல்",
+      "features.f10.body":
+        "இரட்டிப்பான விருந்தினர்களை ஒரே படியில் இணைத்து, உங்களிடம் உள்ள விருந்தினர் பட்டியலை Excel-இலிருந்து கொண்டு வாருங்கள் — ஒவ்வொருவரின் வரலாறும் ஒன்றாகவே இருக்கும்.",
       "families.eyebrow": "தமிழ் வீடுகளுக்கு",
       "families.title": "உங்கள் சமூகம் கொண்டாடும் விதத்திற்கேற்ப",
       "families.lead":
@@ -199,6 +223,7 @@
 
   /* Hero slider */
   const slides = [...document.querySelectorAll(".hero-slide")];
+  const shots = [...document.querySelectorAll(".hero-shot")];
   const dotsRoot = document.querySelector(".hero-dots");
   const prevBtn = document.querySelector(".hero-prev");
   const nextBtn = document.querySelector(".hero-next");
@@ -208,15 +233,29 @@
 
   function goTo(next) {
     if (!slides.length) return;
+    const previous = index;
     index = (next + slides.length) % slides.length;
+    const markLeaving = (el, leaving) => {
+      window.clearTimeout(el._leaveTimer);
+      el.classList.toggle("is-leaving", leaving);
+      if (leaving) {
+        el._leaveTimer = window.setTimeout(() => el.classList.remove("is-leaving"), 900);
+      }
+    };
     slides.forEach((slide, i) => {
       const active = i === index;
+      markLeaving(slide, i === previous && previous !== index);
       slide.classList.toggle("is-active", active);
       if (active) {
         slide.removeAttribute("hidden");
       } else {
         slide.setAttribute("hidden", "");
       }
+    });
+    shots.forEach((shot) => {
+      const n = Number(shot.dataset.shot);
+      markLeaving(shot, n === previous && previous !== index);
+      shot.classList.toggle("is-active", n === index);
     });
     if (dotsRoot) {
       [...dotsRoot.children].forEach((dot, i) => {

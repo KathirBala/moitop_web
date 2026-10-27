@@ -7,10 +7,11 @@
   <meta name="description" content="MoiTop is a family gift register for Tamil functions — record cash and jewellery moi, know your guests, and keep every celebration remembered." />
   <meta property="og:title" content="MoiTop — Connect · Celebrate · Remember" />
   <meta property="og:description" content="Family gift register for Tamil functions. Cash, jewellery, guests, reports — your digital moi kanakku." />
-  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:image" content="https://moitop.com/assets/logo-full.png" />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="assets/icon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600;700&family=Catamaran:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -22,7 +23,10 @@
   <header class="site-header" id="top">
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="MoiTop">
-        <img class="brand-wordmark" src="assets/logo.png" alt="MoiTop" width="160" height="52" />
+        <picture>
+          <source media="(max-width: 599.98px) and (orientation: portrait)" srcset="assets/icon.png" />
+          <img class="brand-wordmark" src="assets/logo-full.png" alt="MoiTop" width="164" height="42" />
+        </picture>
       </a>
 
       <nav class="nav" aria-label="Primary">
@@ -43,7 +47,7 @@
     <section class="hero" aria-roledescription="carousel" aria-label="MoiTop highlights" data-i18n-aria="hero.carousel">
       <div class="hero-atmosphere" aria-hidden="true"></div>
       <div class="shell hero-inner">
-        <img class="hero-logo reveal" src="assets/logo.png" alt="MoiTop" width="380" height="130" />
+        <div class="hero-copy">
 
         <div class="hero-slider">
           <div class="hero-slides">
@@ -90,6 +94,16 @@
             <button type="button" class="hero-nav hero-next" aria-label="Next slide" data-i18n-aria="hero.next">›</button>
           </div>
         </div>
+        </div>
+
+        <div class="hero-shots" aria-hidden="true">
+          <img class="hero-shot is-active" data-shot="0" src="assets/slides/slide-0.webp" alt="" width="308" height="618" />
+          <img class="hero-shot" data-shot="1" src="assets/slides/slide-1.webp" alt="" width="308" height="618" />
+          <img class="hero-shot" data-shot="2" src="assets/slides/slide-2.webp" alt="" width="308" height="618" />
+          <img class="hero-shot" data-shot="3" src="assets/slides/slide-3.webp" alt="" width="308" height="618" />
+          <img class="hero-shot" data-shot="4" src="assets/slides/slide-4.webp" alt="" width="308" height="618" />
+          <img class="hero-shot" data-shot="5" src="assets/slides/slide-5.webp" alt="" width="308" height="618" />
+        </div>
       </div>
     </section>
 
@@ -120,7 +134,11 @@
         <div class="feature-list">
           <article class="feature panel panel-a reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M12 34V14h24v20H12Z" stroke="currentColor" stroke-width="2.2"/><path d="M18 20h12M18 26h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="34" cy="34" r="7" fill="url(#g1)"/><path d="M34 31v6M31 34h6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="g1" x1="27" y1="27" x2="41" y2="41"><stop stop-color="#1a8cff"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="16" width="38" height="24" rx="3" fill="#3cc78a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="24" cy="28" r="6" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M22 25.5h4.5M22 28h4.5M23 25.5c3 0 3 5 0 5l3.5 3" stroke="#0b1f3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="10.5" cy="21.5" r="1.4" fill="#0b1f3a"/><circle cx="37.5" cy="34.5" r="1.4" fill="#0b1f3a"/>
+<circle cx="45" cy="46" r="10" stroke="#f5a623" stroke-width="4.5"/><circle cx="45" cy="46" r="12.2" stroke="#0b1f3a" stroke-width="1.4"/>
+<path d="M39 31.5h12l-6 6.5z" fill="#7cc4ff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M39 31.5l2.5-4h7l2.5 4" fill="#bfe2ff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f1.title">Cash &amp; jewellery by function</h3>
@@ -130,7 +148,10 @@
 
           <article class="feature panel panel-b reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="18" cy="18" r="6" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="20" r="5" stroke="currentColor" stroke-width="2.2"/><path d="M8 36c2-6 6-9 10-9s8 3 10 9M28 34c1.2-3.5 3.5-5.5 6-5.5 2.2 0 4 1.4 5.2 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="25" r="6.5" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 47c0-8.5 5-13 11-13s11 4.5 11 13z" fill="#1a8cff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="45" cy="25" r="6.5" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M34 47c0-8.5 5-13 11-13s11 4.5 11 13z" fill="#f5a623" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M22 12.5Q32 5 42 12.5" stroke="#0d5cb6" stroke-width="3" stroke-linecap="round"/><path d="M37.5 9.5l4.6 3.2-4.9 2.6" stroke="#0d5cb6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42 53Q32 60.5 22 53" stroke="#e8890c" stroke-width="3" stroke-linecap="round"/><path d="M26.5 56l-4.6-3.2 4.9-2.6" stroke="#e8890c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f2.title">Guest history &amp; reciprocity</h3>
@@ -140,7 +161,11 @@
 
           <article class="feature panel panel-c reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="12" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="23" r="5" stroke="currentColor" stroke-width="2.2"/><path d="M16 34l4-5 3 2 5-7 4 10" stroke="url(#g2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g2" x1="16" y1="28" x2="36" y2="34"><stop stop-color="#1a8cff"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="8" width="30" height="42" rx="3" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M14 18h17M14 25h17M14 32h11" stroke="#9fb3c8" stroke-width="2.5" stroke-linecap="round"/><path d="M7 14h-2M7 22h-2M7 30h-2M7 38h-2" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="38" y="6" width="18" height="18" rx="3" fill="#3cc78a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 6v18M50 6v18M38 12h18M38 18h18" stroke="#fff" stroke-width="1.6"/>
+<path d="M30 36h6l3-5h10l3 5h4a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H30a3 3 0 0 1-3-3V39a3 3 0 0 1 3-3z" fill="#1a8cff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="44" cy="45" r="6.5" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="44" cy="45" r="2.8" fill="#f5a623"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f3.title">Photo notebook &amp; Excel import</h3>
@@ -150,7 +175,11 @@
 
           <article class="feature panel panel-a reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M10 32V16h10l4 6h14v10H10Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 36h20M18 28v8M24 26v10M30 29v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="42" height="38" rx="4" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 16h42" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="11" cy="12" r="1.2" fill="#0b1f3a"/><circle cx="15" cy="12" r="1.2" fill="#0b1f3a"/>
+<rect x="13" y="30" width="6" height="10" rx="1" fill="#1a8cff"/><rect x="23" y="22" width="6" height="18" rx="1" fill="#f5a623"/><rect x="33" y="26" width="6" height="14" rx="1" fill="#3cc78a"/>
+<path d="M11 40h30" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="47" cy="47" r="11" fill="#0d5cb6" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M47 41v11M42.5 47.5l4.5 4.5 4.5-4.5" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f4.title">Dashboard, reports &amp; export</h3>
@@ -160,7 +189,10 @@
 
           <article class="feature panel panel-b reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M24 38s-12-9-12-18a12 12 0 1124 0c0 9-12 18-12 18Z" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="20" r="4" stroke="url(#g3)" stroke-width="2.2"/><defs><linearGradient id="g3" x1="20" y1="16" x2="28" y2="24"><stop stop-color="#1a8cff"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 18l14-6 14 6 14-6v34l-14 6-14-6-14 6z" fill="#e6f1ff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M19 12v34M33 18v34" stroke="#0b1f3a" stroke-width="1.5" opacity=".5"/>
+<path d="M26 10c-6 0-10.5 4.6-10.5 10.3C15.5 28 26 37 26 37s10.5-9 10.5-16.7C36.5 14.6 32 10 26 10z" fill="#ff6b5b" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="26" cy="20.5" r="3.8" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M44 37h12a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4h-6l-6 5v-5a4 4 0 0 1-4-4v-7a4 4 0 0 1 4-4z" fill="#3cc78a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="45.5" cy="44.5" r="1.6" fill="#fff"/><circle cx="50" cy="44.5" r="1.6" fill="#fff"/><circle cx="54.5" cy="44.5" r="1.6" fill="#fff"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f5.title">Places &amp; easy contact</h3>
@@ -170,11 +202,68 @@
 
           <article class="feature panel panel-c reveal">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="8" width="20" height="32" rx="4" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="34" r="1.8" fill="currentColor"/><path d="M20 14h8" stroke="url(#g4)" stroke-width="2.2" stroke-linecap="round"/><defs><linearGradient id="g4" x1="20" y1="14" x2="28" y2="14"><stop stop-color="#1a8cff"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs></svg>
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="5" width="28" height="52" rx="5" fill="#1a3358" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="15.5" y="11" width="21" height="37" rx="2" fill="#e6f1ff"/>
+<circle cx="26" cy="52.5" r="1.7" fill="#fff"/><path d="M20 17h12M20 23h8" stroke="#9fd0ff" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M44 26l12 4.5v8c0 8-5.5 12.5-12 15-6.5-2.5-12-7-12-15v-8z" fill="#f5a623" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M38.5 39l3.8 3.8 7.2-7.2" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <h3 data-i18n="features.f6.title">Private family accounts, phone-ready</h3>
-              <p data-i18n="features.f6.body">Each family or organization keeps its own register. Invite members with roles, and use it on the day from a phone — installable like an app.</p>
+              <p data-i18n="features.f6.body">Each family or organization keeps its own register in its own separate database. Use it on the day from any phone — and install it like an app.</p>
+            </div>
+          </article>
+
+          <article class="feature panel panel-a reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 33L17 22l12 11v15H5z" fill="#1a8cff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="14" y="38" width="6" height="10" rx="1" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M35 33l12-11 12 11v15H35z" fill="#f5a623" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="44" y="38" width="6" height="10" rx="1" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M43 12H21" stroke="#0d5cb6" stroke-width="3" stroke-linecap="round"/><path d="M25 7.5L20.5 12l4.5 4.5" stroke="#0d5cb6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 56h22" stroke="#e8890c" stroke-width="3" stroke-linecap="round"/><path d="M39 51.5l4.5 4.5-4.5 4.5" stroke="#e8890c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="features.f7.title">Share with family, switch between families</h3>
+              <p data-i18n="features.f7.body">Send a one-time link by email to bring in relatives as an admin, a member, or view-only. In more than one family? Switch between them in a tap — each family’s records stay separate.</p>
+            </div>
+          </article>
+
+          <article class="feature panel panel-b reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="7" width="32" height="46" rx="4" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M12 17h20M12 25h20M12 33h13" stroke="#9fb3c8" stroke-width="2.5" stroke-linecap="round"/><rect x="12" y="40" width="13" height="7" rx="2" fill="#1a8cff"/>
+<path d="M47 6L33 31h10l-4 25 18-30H46l6-20z" fill="#f5a623" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="features.f8.title">Fast entry on the function day</h3>
+              <p data-i18n="features.f8.body">“Save &amp; Next” keeps the queue moving, the search in the top bar finds any guest, and closing a function stops new entries once the event is over.</p>
+            </div>
+          </article>
+
+          <article class="feature panel panel-c reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6h28v50l-4.7-3.3-4.6 3.3-4.7-3.3-4.7 3.3-4.6-3.3L8 56z" fill="#fff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M14 16h16M14 23h16M14 30h10" stroke="#9fb3c8" stroke-width="2.5" stroke-linecap="round"/><path d="M14 40h16" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="38" y="34" width="20" height="14" fill="#f5a623"/><ellipse cx="48" cy="48" rx="10" ry="4" fill="#f5a623" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="38.2" y="34" width="19.6" height="14" fill="#f5a623"/>
+<path d="M38 34v14M58 34v14" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M38 39a10 4 0 0 0 20 0M38 44a10 4 0 0 0 20 0" stroke="#0b1f3a" stroke-width="1.6"/>
+<ellipse cx="48" cy="34" rx="10" ry="4" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
+            </div>
+            <div>
+              <h3 data-i18n="features.f9.title">Function expenses &amp; balance</h3>
+              <p data-i18n="features.f9.body">Note the hall, catering, and other costs against each function, and see the balance left from the moi received.</p>
+            </div>
+          </article>
+
+          <article class="feature panel panel-a reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="15" r="5" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M5 31c0-6 3.5-9 8-9s8 3 8 9z" fill="#9fd0ff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="13" cy="39" r="5" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M5 55c0-6 3.5-9 8-9s8 3 8 9z" fill="#9fd0ff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M24 24c7 0 7 11 13 11M24 48c7 0 7-13 13-13" stroke="#0d5cb6" stroke-width="2.8" stroke-linecap="round"/><path d="M33.5 31.5L37.5 35l-4 3.5" stroke="#0d5cb6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="25" r="7" fill="#ffd89a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M39 50c0-8.5 5-13 11-13s11 4.5 11 13z" fill="#1a8cff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="56" cy="50" r="6.5" fill="#3cc78a" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M53 50.2l2.2 2.2 4.2-4.2" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="features.f10.title">A tidy guest list</h3>
+              <p data-i18n="features.f10.body">Merge duplicate guests in one step and bring in your existing guest list from Excel — each person’s history stays together.</p>
             </div>
           </article>
         </div>
@@ -200,7 +289,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <div class="footer-lead">
-        <img class="footer-logo" src="assets/logo.png" alt="MoiTop" width="180" height="58" />
+        <img class="footer-logo" src="assets/logo-full-light.png" alt="MoiTop" width="203" height="52" />
         <p class="footer-tagline" data-i18n="footer.tagline">Connect · Celebrate · Remember</p>
       </div>
       <div class="footer-meta">
