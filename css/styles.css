@@ -836,6 +836,20 @@ main {
     padding: 0.55rem 0 0.65rem;
   }
 
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-wordmark {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 3.4rem;
+    object-fit: contain;
+    object-position: left center;
+  }
+
   .lang-switch {
     margin-left: auto;
   }
@@ -860,22 +874,9 @@ main {
     padding: 0.3rem 0 0.4rem;
   }
 
-  .brand-wordmark {
-    height: 2rem;
-  }
-
   .nav {
     gap: 0.15rem 0.85rem;
     font-size: 0.82rem;
-  }
-}
-
-/* Phones held upright show only the mark (see the <picture> in the header). Kept last so it wins. */
-@media (max-width: 599.98px) and (orientation: portrait) {
-  .brand-wordmark {
-    height: 2.4rem;
-    width: 2.4rem;
-    object-fit: contain;
   }
 }
 
